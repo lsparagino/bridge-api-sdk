@@ -1,6 +1,6 @@
-# rethink/bridgesdk
+# lsparagino/bridgesdk
 
-Developer-friendly & type-safe Php SDK specifically catered to leverage *rethink/bridgesdk* API.
+Developer-friendly & type-safe Php SDK specifically catered to leverage Bridge API.
 
 [![Built by Speakeasy](https://img.shields.io/badge/Built_by-SPEAKEASY-374151?style=for-the-badge&labelColor=f3f4f6)](https://www.speakeasy.com/?utm_source=rethink/bridgesdk&utm_campaign=php)
 [![License: MIT](https://img.shields.io/badge/LICENSE_//_MIT-3b5bdb?style=for-the-badge&labelColor=eff6ff)](https://opensource.org/licenses/MIT)
@@ -15,7 +15,7 @@ Bridge API: APIs to move into, out of, and between any form of a dollar
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [rethink/bridgesdk](#rethinkbridgesdk)
+* [lsparagino/bridgesdk](#lsparaginobridgesdk)
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)

@@ -57,4 +57,4 @@ php:
   multipartArrayFormat: standard
   namespace: ReThink\BridgeSDK
   outputModelSuffix: output
-  packageName: rethink/bridgesdk
+  packageName: lsparagino/bridgesdk
