@@ -1,0 +1,10 @@
+# PostCustomersCustomerIDLiquidationAddressesRequest
+
+
+## Fields
+
+| Field                                                                                      | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `customerID`                                                                               | *string*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `idempotencyKey`                                                                           | *string*                                                                                   | :heavy_check_mark:                                                                         | N/A                                                                                        |
+| `body`                                                                                     | [Components\CreateLiquidationAddress](../../Models/Components/CreateLiquidationAddress.md) | :heavy_check_mark:                                                                         | Liquidation Address object to be created                                                   |

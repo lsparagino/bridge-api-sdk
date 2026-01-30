@@ -1,0 +1,9 @@
+# PutCryptoReturnPoliciesPolicyIDRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `policyID`                                                                                           | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `body`                                                                                               | [Components\PostCryptoReturnPoliciesInput](../../Models/Components/PostCryptoReturnPoliciesInput.md) | :heavy_check_mark:                                                                                   | Crypto return policy object to be updated                                                            |

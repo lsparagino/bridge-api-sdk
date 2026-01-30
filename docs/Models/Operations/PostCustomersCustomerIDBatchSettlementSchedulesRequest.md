@@ -1,0 +1,10 @@
+# PostCustomersCustomerIDBatchSettlementSchedulesRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `customerID`                                                                                         | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `idempotencyKey`                                                                                     | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `body`                                                                                               | [Components\CreateBatchSettlementSchedule](../../Models/Components/CreateBatchSettlementSchedule.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

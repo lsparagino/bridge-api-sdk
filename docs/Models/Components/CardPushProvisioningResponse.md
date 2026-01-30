@@ -1,0 +1,12 @@
+# CardPushProvisioningResponse
+
+The mobile wallet push provisioning response
+
+
+## Fields
+
+| Field                                                                                                                 | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `walletProvider`                                                                                                      | [?Components\CardWalletProvider](../../Models/Components/CardWalletProvider.md)                                       | :heavy_minus_sign:                                                                                                    | The wallet provider of the push provisioning request                                                                  |
+| `applePay`                                                                                                            | [?Components\CardPushProvisioningResponseApplePay](../../Models/Components/CardPushProvisioningResponseApplePay.md)   | :heavy_minus_sign:                                                                                                    | The detailed provisioning request data that need to be sent directly to the `apple_pay` wallet provider               |
+| `googlePay`                                                                                                           | [?Components\CardPushProvisioningResponseGooglePay](../../Models/Components/CardPushProvisioningResponseGooglePay.md) | :heavy_minus_sign:                                                                                                    | The detailed provisioning request data that need to be sent directly to the `google_pay` wallet provider              |

@@ -1,0 +1,10 @@
+# PutCustomersCustomerIDExternalAccountsExternalAccountIDRequest
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `customerID`                                                                                   | *string*                                                                                       | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `externalAccountID`                                                                            | *string*                                                                                       | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `body`                                                                                         | [Components\UpdateExternalAccountInput](../../Models/Components/UpdateExternalAccountInput.md) | :heavy_check_mark:                                                                             | External Account details to be updated                                                         |

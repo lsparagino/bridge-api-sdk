@@ -1,0 +1,39 @@
+speakeasyVersion: 1.690.0
+sources:
+    Bridge API:
+        sourceNamespace: bridge-api
+        sourceRevisionDigest: sha256:d9fc518765723c1a22307c67ad72e2be6f8980a226642e075f889e2a43426663
+        sourceBlobDigest: sha256:456d52eaaae3df1b71d34a1f7a89fa4c90da59cd9f800a4a929db3435350211d
+        tags:
+            - latest
+            - "1"
+targets:
+    bridge-sdk:
+        source: Bridge API
+        sourceNamespace: bridge-api
+        sourceRevisionDigest: sha256:d9fc518765723c1a22307c67ad72e2be6f8980a226642e075f889e2a43426663
+        sourceBlobDigest: sha256:456d52eaaae3df1b71d34a1f7a89fa4c90da59cd9f800a4a929db3435350211d
+        codeSamplesNamespace: bridge-api-php-code-samples
+        codeSamplesRevisionDigest: sha256:a8dbc3baf8a3a7d16c5abad6402f238fcdaf27f1f8b25f595fbea67f418790d1
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Bridge API:
+            inputs:
+                - location: openapi.json
+            overlays:
+                - location: .speakeasy\speakeasy-modifications-overlay.yaml
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/rethink/bridge/bridge-api
+    targets:
+        bridge-sdk:
+            target: php
+            source: Bridge API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/rethink/bridge/bridge-api-php-code-samples
+                labelOverride:
+                    fixedValue: Php (SDK)
+                blocking: false

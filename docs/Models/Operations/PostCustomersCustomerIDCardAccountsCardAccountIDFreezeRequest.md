@@ -1,0 +1,11 @@
+# PostCustomersCustomerIDCardAccountsCardAccountIDFreezeRequest
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `idempotencyKey`                                                                  | *string*                                                                          | :heavy_check_mark:                                                                | N/A                                                                               |
+| `customerID`                                                                      | *string*                                                                          | :heavy_check_mark:                                                                | N/A                                                                               |
+| `cardAccountID`                                                                   | *string*                                                                          | :heavy_check_mark:                                                                | N/A                                                                               |
+| `body`                                                                            | [?Components\PostCardFreezeInput](../../Models/Components/PostCardFreezeInput.md) | :heavy_minus_sign:                                                                | The freeze to be placed on the card account                                       |

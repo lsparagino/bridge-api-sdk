@@ -1,0 +1,11 @@
+# PostCustomersCustomerIDCardAccountsCardAccountIDWithdrawalsRequest
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `idempotencyKey`                                                                 | *string*                                                                         | :heavy_check_mark:                                                               | N/A                                                                              |
+| `customerID`                                                                     | *string*                                                                         | :heavy_check_mark:                                                               | N/A                                                                              |
+| `cardAccountID`                                                                  | *string*                                                                         | :heavy_check_mark:                                                               | N/A                                                                              |
+| `body`                                                                           | [Components\CardWithdrawalInput](../../Models/Components/CardWithdrawalInput.md) | :heavy_check_mark:                                                               | The withdrawal request                                                           |

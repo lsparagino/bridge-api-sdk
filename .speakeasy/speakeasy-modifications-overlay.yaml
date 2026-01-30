@@ -1,0 +1,1100 @@
+overlay: 1.0.0
+x-speakeasy-jsonpath: rfc9535
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/customers/{customerID}/static_memos/{staticMemoID}"]["get"]
+    update:
+      x-speakeasy-group: staticMemos
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.staticMemos.get()
+      before: sdk.Static Memos.get_/customers/{customerID}/static_memos/{staticMemoID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/wallets/{bridgeWalletID}"]["get"]
+    update:
+      x-speakeasy-group: bridgeWallets
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.bridgeWallets.get()
+      before: sdk.Bridge Wallets.get_/customers/{customerID}/wallets/{bridgeWalletID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/rewards/{currency}/rates"]["get"]
+    update:
+      x-speakeasy-name-override: currencyRates
+    x-speakeasy-metadata:
+      after: sdk.rewards.currencyRates()
+      before: sdk.Rewards.get_/rewards/{currency}/rates()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/developer/fees"]["get"]
+    update:
+      x-speakeasy-name-override: getFees
+    x-speakeasy-metadata:
+      after: sdk.developers.getFees()
+      before: sdk.Developers.get_/developer/fees()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/prefunded_accounts/{prefundedAccountID}"]["get"]
+    update:
+      x-speakeasy-group: prefundedAccounts
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.prefundedAccounts.get()
+      before: sdk.Prefunded Accounts.get_/prefunded_accounts/{prefundedAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/liquidation_addresses/{liquidationAddressID}/drains"]["get"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: getDrains
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.getDrains()
+      before: sdk.Liquidation Addresses.get_/customers/{customerID}/liquidation_addresses/{liquidationAddressID}/drains()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts/{virtualAccountID}/reactivate"]["post"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: reactivate
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.reactivate()
+      before: sdk.Virtual Accounts.post_/customers/{customerID}/virtual_accounts/{virtualAccountID}/reactivate()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/transactions/{transactionID}"]["get"]
+    update:
+      x-speakeasy-name-override: getTransaction
+    x-speakeasy-metadata:
+      after: sdk.cards.getTransaction()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}/transactions/{transactionID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/rewards/{currency}/customer/{customerID}/history"]["get"]
+    update:
+      x-speakeasy-name-override: getCustomerHistory
+    x-speakeasy-metadata:
+      after: sdk.Rewards.getCustomerHistory()
+      before: sdk.Rewards.get_/rewards/{currency}/customer/{customerID}/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/kyc_links"]["post"]
+    update:
+      x-speakeasy-group: kycLinks
+      x-speakeasy-name-override: generate
+    x-speakeasy-metadata:
+      after: sdk.kycLinks.generate()
+      before: sdk.KYC Links.post_/kyc_links()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/transfers"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.transfers.create()
+      before: sdk.Transfers.post_/transfers()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/external_accounts/{externalAccountID}"]["put"]
+    update:
+      x-speakeasy-group: externalAccounts
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.externalAccounts.update()
+      before: sdk.External Accounts.put_/customers/{customerID}/external_accounts/{externalAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/unfreeze"]["post"]
+    update:
+      x-speakeasy-name-override: unfreeze
+    x-speakeasy-metadata:
+      after: sdk.cards.unfreeze()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/unfreeze()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/wallets/total_balances"]["get"]
+    update:
+      x-speakeasy-group: bridgeWallets
+      x-speakeasy-name-override: getTotalBalances
+    x-speakeasy-metadata:
+      after: sdk.bridgeWallets.getTotalBalances()
+      before: sdk.Bridge Wallets.get_/wallets/total_balances()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/statements/{period}.pdf"]["post"]
+    update:
+      x-speakeasy-name-override: generateStatement
+    x-speakeasy-metadata:
+      after: sdk.cards.generateStatement()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/statements/{period}.pdf()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/authorizations"]["get"]
+    update:
+      x-speakeasy-name-override: listAuthorizations
+    x-speakeasy-metadata:
+      after: sdk.cards.listAuthorizations()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}/authorizations()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/batch_settlement_schedules"]["post"]
+    update:
+      x-speakeasy-group: BatchSettlements
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.BatchSettlements.create()
+      before: sdk.Batch Settlements.post_/customers/{customerID}/batch_settlement_schedules()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/developer/fee_external_account"]["get"]
+    update:
+      x-speakeasy-name-override: getFeeExternalAccount
+    x-speakeasy-metadata:
+      after: sdk.developers.getFeeExternalAccount()
+      before: sdk.Developers.get_/developer/fee_external_account()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/prefunded_accounts/{prefundedAccountID}/history"]["get"]
+    update:
+      x-speakeasy-group: prefundedAccounts
+      x-speakeasy-name-override: getHistory
+    x-speakeasy-metadata:
+      after: sdk.prefundedAccounts.getHistory()
+      before: sdk.Prefunded Accounts.get_/prefunded_accounts/{prefundedAccountID}/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/ephemeral_keys"]["post"]
+    update:
+      x-speakeasy-name-override: generateEphemeralKey
+    x-speakeasy-metadata:
+      after: sdk.cards.generateEphemeralKey()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/ephemeral_keys()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.customers.delete()
+      before: sdk.Customers.delete_/customers/{customerID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/static_memos"]["post"]
+    update:
+      x-speakeasy-group: staticMemos
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.staticMemos.create()
+      before: sdk.Static Memos.post_/customers/{customerID}/static_memos()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/exchange_rates"]["get"]
+    update:
+      x-speakeasy-group: exchangeRates
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.exchangeRates.get()
+      before: sdk.Exchange Rates.get_/exchange_rates()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/wallets"]["post"]
+    update:
+      x-speakeasy-group: bridgeWallets
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.bridgeWallets.create()
+      before: sdk.Bridge Wallets.post_/customers/{customerID}/wallets()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/plaid_exchange_public_token/{link_token}"]["post"]
+    update:
+      x-speakeasy-name-override: exchangePublicToken
+    x-speakeasy-metadata:
+      after: sdk.plaid.exchangePublicToken()
+      before: sdk.Plaid.post_/plaid_exchange_public_token/{link_token}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.customers.update()
+      before: sdk.Customers.put_/customers/{customerID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/static_memos/{staticMemoID}/history"]["get"]
+    update:
+      x-speakeasy-group: StaticMemos
+      x-speakeasy-name-override: getHistoryForCustomer
+    x-speakeasy-metadata:
+      after: sdk.StaticMemos.getHistoryForCustomer()
+      before: sdk.Static Memos.get_/customers/{customerID}/static_memos/{staticMemoID}/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts/{virtualAccountID}"]["get"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.get()
+      before: sdk.Virtual Accounts.get_/customers/{customerID}/virtual_accounts/{virtualAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/developer/fees"]["post"]
+    update:
+      x-speakeasy-name-override: updateFees
+    x-speakeasy-metadata:
+      after: sdk.developers.updateFees()
+      before: sdk.Developers.post_/developer/fees()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/tos_acceptance_link"]["get"]
+    update:
+      x-speakeasy-name-override: getTosAcceptanceLink
+    x-speakeasy-metadata:
+      after: sdk.customers.getTosAcceptanceLink()
+      before: sdk.Customers.get_/customers/{customerID}/tos_acceptance_link()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/crypto_return_policies/{policyID}"]["put"]
+    update:
+      x-speakeasy-group: CryptoReturnPolicies
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.CryptoReturnPolicies.update()
+      before: sdk.Crypto Return Policies.put_/crypto_return_policies/{policyID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/external_accounts/{externalAccountID}/reactivate"]["post"]
+    update:
+      x-speakeasy-group: externalAccounts
+      x-speakeasy-name-override: reactivate
+    x-speakeasy-metadata:
+      after: sdk.externalAccounts.reactivate()
+      before: sdk.External Accounts.post_/customers/{customerID}/external_accounts/{externalAccountID}/reactivate()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/virtual_accounts/history"]["get"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: getHistory
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.getHistory()
+      before: sdk.Virtual Accounts.get_/virtual_accounts/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/external_accounts"]["post"]
+    update:
+      x-speakeasy-group: externalAccounts
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.externalAccounts.create()
+      before: sdk.External Accounts.post_/customers/{customerID}/external_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/rewards/{currency}"]["get"]
+    update:
+      x-speakeasy-name-override: summary
+    x-speakeasy-metadata:
+      after: sdk.rewards.summary()
+      before: sdk.Rewards.get_/rewards/{currency}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/associated_persons/{associatedPersonID}"]["get"]
+    update:
+      x-speakeasy-group: associatedPersons
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.associatedPersons.get()
+      before: sdk.Associated Persons (Beta).get_/associated_persons/{associatedPersonID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks/{webhookID}/logs"]["get"]
+    update:
+      x-speakeasy-name-override: getLogs
+    x-speakeasy-metadata:
+      after: sdk.webhooks.getLogs()
+      before: sdk.Webhooks.get_/webhooks/{webhookID}/logs()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/kyc_link"]["get"]
+    update:
+      x-speakeasy-name-override: getKycLink
+    x-speakeasy-metadata:
+      after: sdk.customers.getKycLink()
+      before: sdk.Customers.get_/customers/{customerID}/kyc_link()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/rewards/{currency}/customer/{customerID}"]["get"]
+    update:
+      x-speakeasy-name-override: getSummary
+    x-speakeasy-metadata:
+      after: sdk.rewards.getSummary()
+      before: sdk.Rewards.get_/rewards/{currency}/customer/{customerID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.customers.create()
+      before: sdk.Customers.post_/customers()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/associated_persons/{associatedPersonID}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteAssociatedPerson
+    x-speakeasy-metadata:
+      after: sdk.customers.deleteAssociatedPerson()
+      before: sdk.Customers.delete_/customers/{customerID}/associated_persons/{associatedPersonID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/transactions"]["get"]
+    update:
+      x-speakeasy-name-override: getTransactions
+    x-speakeasy-metadata:
+      after: sdk.cards.getTransactions()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}/transactions()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.Customers.get()
+      before: sdk.Customers.get_/customers/{customerID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/freeze"]["post"]
+    update:
+      x-speakeasy-name-override: freeze
+    x-speakeasy-metadata:
+      after: sdk.cards.freeze()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/freeze()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/create_mobile_wallet_provisioning_request"]["post"]
+    update:
+      x-speakeasy-name-override: createMobileWalletProvisioningRequest
+    x-speakeasy-metadata:
+      after: sdk.cards.createMobileWalletProvisioningRequest()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/create_mobile_wallet_provisioning_request()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/external_accounts"]["get"]
+    update:
+      x-speakeasy-group: ExternalAccounts
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.ExternalAccounts.list()
+      before: sdk.External Accounts.get_/external_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/funds_requests"]["get"]
+    update:
+      x-speakeasy-group: fundsRequests
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.fundsRequests.list()
+      before: sdk.Funds Requests.get_/funds_requests()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/associated_persons/{associatedPersonID}"]["delete"]
+    update:
+      x-speakeasy-group: associatedPersons
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.associatedPersons.delete()
+      before: sdk.Associated Persons (Beta).delete_/associated_persons/{associatedPersonID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/static_memos/history"]["get"]
+    update:
+      x-speakeasy-group: StaticMemos
+      x-speakeasy-name-override: getHistory
+    x-speakeasy-metadata:
+      after: sdk.StaticMemos.getHistory()
+      before: sdk.Static Memos.get_/static_memos/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/fiat_payout_configuration"]["get"]
+    update:
+      x-speakeasy-group: fiatPayoutConfigurations
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.fiatPayoutConfigurations.get()
+      before: sdk.Fiat Payout Configuration.get_/customers/{customerID}/fiat_payout_configuration()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/liquidation_addresses/drains"]["get"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: allDrains
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.allDrains()
+      before: sdk.Liquidation Addresses.get_/liquidation_addresses/drains()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/tos_links"]["post"]
+    update:
+      x-speakeasy-name-override: createTosLink
+    x-speakeasy-metadata:
+      after: sdk.customers.createTosLink()
+      before: sdk.Customers.post_/customers/tos_links()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/associated_persons/{associatedPersonID}"]["get"]
+    update:
+      x-speakeasy-name-override: getAssociatedPerson
+    x-speakeasy-metadata:
+      after: sdk.customers.getAssociatedPerson()
+      before: sdk.Customers.get_/customers/{customerID}/associated_persons/{associatedPersonID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/transfers/{transferID}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.Transfers.delete()
+      before: sdk.Transfers.delete_/transfers/{transferID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/static_memos"]["get"]
+    update:
+      x-speakeasy-group: staticMemos
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.staticMemos.list()
+      before: sdk.Static Memos.get_/static_memos()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/liquidation_addresses"]["post"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.create()
+      before: sdk.Liquidation Addresses.post_/customers/{customerID}/liquidation_addresses()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/lists/occupation_codes"]["get"]
+    update:
+      x-speakeasy-name-override: getOccupationCodes
+    x-speakeasy-metadata:
+      after: sdk.lists.getOccupationCodes()
+      before: sdk.Lists.get_/lists/occupation_codes()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/withdrawals"]["get"]
+    update:
+      x-speakeasy-name-override: listWithdrawals
+    x-speakeasy-metadata:
+      after: sdk.cards.listWithdrawals()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}/withdrawals()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/transfers/static_templates"]["get"]
+    update:
+      x-speakeasy-name-override: listStaticTemplates
+    x-speakeasy-metadata:
+      after: sdk.transfers.listStaticTemplates()
+      before: sdk.Transfers.get_/transfers/static_templates()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/associated_persons/{associatedPersonID}"]["put"]
+    update:
+      x-speakeasy-group: AssociatedPersons
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.AssociatedPersons.update()
+      before: sdk.Associated Persons (Beta).put_/associated_persons/{associatedPersonID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/rewards/rates"]["get"]
+    update:
+      x-speakeasy-name-override: getRates
+    x-speakeasy-metadata:
+      after: sdk.rewards.getRates()
+      before: sdk.Rewards.get_/rewards/rates()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/liquidation_addresses"]["get"]
+    update:
+      x-speakeasy-group: LiquidationAddresses
+      x-speakeasy-name-override: listForCustomer
+    x-speakeasy-metadata:
+      after: sdk.LiquidationAddresses.listForCustomer()
+      before: sdk.Liquidation Addresses.get_/customers/{customerID}/liquidation_addresses()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/developer/fee_external_account"]["post"]
+    update:
+      x-speakeasy-name-override: configureFeeExternalAccount
+    x-speakeasy-metadata:
+      after: sdk.developers.configureFeeExternalAccount()
+      before: sdk.Developers.post_/developer/fee_external_account()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/transfers"]["get"]
+    update:
+      x-speakeasy-name-override: getTransfers
+    x-speakeasy-metadata:
+      after: sdk.customers.getTransfers()
+      before: sdk.Customers.get_/customers/{customerID}/transfers()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/static_templates"]["get"]
+    update:
+      x-speakeasy-name-override: getStaticTemplates
+    x-speakeasy-metadata:
+      after: sdk.customers.getStaticTemplates()
+      before: sdk.Customers.get_/customers/{customerID}/static_templates()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/transfers/{transferID}"]["get"]
+    update:
+      x-speakeasy-name-override: getById
+    x-speakeasy-metadata:
+      after: sdk.transfers.getById()
+      before: sdk.Transfers.get_/transfers/{transferID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/withdrawals"]["post"]
+    update:
+      x-speakeasy-name-override: createWithdrawal
+    x-speakeasy-metadata:
+      after: sdk.cards.createWithdrawal()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/withdrawals()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts/{virtualAccountID}/history"]["get"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: customerHistory
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.customerHistory()
+      before: sdk.Virtual Accounts.get_/customers/{customerID}/virtual_accounts/{virtualAccountID}/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/wallets"]["get"]
+    update:
+      x-speakeasy-group: bridgeWallets
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.bridgeWallets.list()
+      before: sdk.Bridge Wallets.get_/wallets()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/kyc_links"]["get"]
+    update:
+      x-speakeasy-group: kycLinks
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.kycLinks.list()
+      before: sdk.KYC Links.get_/kyc_links()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.cards.list()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts"]["post"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.create()
+      before: sdk.Virtual Accounts.post_/customers/{customerID}/virtual_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks/{webhookID}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.webhooks.delete()
+      before: sdk.Webhooks.delete_/webhooks/{webhookID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/prefunded_accounts"]["get"]
+    update:
+      x-speakeasy-group: prefundedAccounts
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.prefundedAccounts.list()
+      before: sdk.Prefunded Accounts.get_/prefunded_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/auth_controls"]["get"]
+    update:
+      x-speakeasy-name-override: getAuthControls
+    x-speakeasy-metadata:
+      after: sdk.cards.getAuthControls()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}/auth_controls()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/lists/countries"]["get"]
+    update:
+      x-speakeasy-name-override: listCountries
+    x-speakeasy-metadata:
+      after: sdk.lists.listCountries()
+      before: sdk.Lists.get_/lists/countries()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/wallets/{bridgeWalletID}/history"]["get"]
+    update:
+      x-speakeasy-group: bridgeWallets
+      x-speakeasy-name-override: getHistory
+    x-speakeasy-metadata:
+      after: sdk.bridgeWallets.getHistory()
+      before: sdk.Bridge Wallets.get_/wallets/{bridgeWalletID}/history()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/deposit_addresses"]["post"]
+    update:
+      x-speakeasy-name-override: provisionDepositAddress
+    x-speakeasy-metadata:
+      after: sdk.cards.provisionDepositAddress()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/deposit_addresses()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts"]["get"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: listByCustomer
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.listByCustomer()
+      before: sdk.Virtual Accounts.get_/customers/{customerID}/virtual_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/developer/cards/summary"]["get"]
+    update:
+      x-speakeasy-name-override: getSummary
+    x-speakeasy-metadata:
+      after: sdk.cards.getSummary()
+      before: sdk.Cards.get_/developer/cards/summary()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/associated_persons"]["post"]
+    update:
+      x-speakeasy-name-override: addAssociatedPerson
+    x-speakeasy-metadata:
+      after: sdk.customers.addAssociatedPerson()
+      before: sdk.Customers.post_/customers/{customerID}/associated_persons()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks/{webhookID}/send"]["post"]
+    update:
+      x-speakeasy-name-override: send
+    x-speakeasy-metadata:
+      after: sdk.Webhooks.send()
+      before: sdk.Webhooks.post_/webhooks/{webhookID}/send()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/crypto_return_policies"]["get"]
+    update:
+      x-speakeasy-group: cryptoReturnPolicies
+      x-speakeasy-name-override: getAll
+    x-speakeasy-metadata:
+      after: sdk.cryptoReturnPolicies.getAll()
+      before: sdk.Crypto Return Policies.get_/crypto_return_policies()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/static_memos/{staticMemoID}"]["put"]
+    update:
+      x-speakeasy-group: staticMemos
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.staticMemos.update()
+      before: sdk.Static Memos.put_/customers/{customerID}/static_memos/{staticMemoID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks/{webhookID}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.webhooks.update()
+      before: sdk.Webhooks.put_/webhooks/{webhookID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/transfers/{transferID}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.transfers.update()
+      before: sdk.Transfers.put_/transfers/{transferID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks/{webhookID}/events"]["get"]
+    update:
+      x-speakeasy-name-override: getEvents
+    x-speakeasy-metadata:
+      after: sdk.webhooks.getEvents()
+      before: sdk.Webhooks.get_/webhooks/{webhookID}/events()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/crypto_return_policies"]["post"]
+    update:
+      x-speakeasy-group: cryptoReturnPolicies
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.cryptoReturnPolicies.create()
+      before: sdk.Crypto Return Policies.post_/crypto_return_policies()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts/{virtualAccountID}/deactivate"]["post"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: deactivate
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.deactivate()
+      before: sdk.Virtual Accounts.post_/customers/{customerID}/virtual_accounts/{virtualAccountID}/deactivate()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.customers.list()
+      before: sdk.Customers.get_/customers()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/fiat_payout_configuration"]["patch"]
+    update:
+      x-speakeasy-group: fiatPayoutConfigurations
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.fiatPayoutConfigurations.update()
+      before: sdk.Fiat Payout Configuration.patch_/customers/{customerID}/fiat_payout_configuration()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/external_accounts"]["get"]
+    update:
+      x-speakeasy-group: ExternalAccounts
+      x-speakeasy-name-override: listForCustomer
+    x-speakeasy-metadata:
+      after: sdk.ExternalAccounts.listForCustomer()
+      before: sdk.External Accounts.get_/customers/{customerID}/external_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/associated_persons/{associatedPersonID}"]["put"]
+    update:
+      x-speakeasy-name-override: updateAssociatedPerson
+    x-speakeasy-metadata:
+      after: sdk.customers.updateAssociatedPerson()
+      before: sdk.Customers.put_/customers/{customerID}/associated_persons/{associatedPersonID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/external_accounts/{externalAccountID}"]["get"]
+    update:
+      x-speakeasy-group: ExternalAccounts
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.ExternalAccounts.get()
+      before: sdk.External Accounts.get_/customers/{customerID}/external_accounts/{externalAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/kyc_links/{kycLinkID}"]["get"]
+    update:
+      x-speakeasy-group: kycLinks
+      x-speakeasy-name-override: getById
+    x-speakeasy-metadata:
+      after: sdk.kycLinks.getById()
+      before: sdk.KYC Links.get_/kyc_links/{kycLinkID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/external_accounts/{externalAccountID}"]["delete"]
+    update:
+      x-speakeasy-group: externalAccounts
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.externalAccounts.delete()
+      before: sdk.External Accounts.delete_/customers/{customerID}/external_accounts/{externalAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/withdrawals/{cardWithdrawalID}"]["get"]
+    update:
+      x-speakeasy-name-override: getWithdrawal
+    x-speakeasy-metadata:
+      after: sdk.cards.getWithdrawal()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}/withdrawals/{cardWithdrawalID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/transfers"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.transfers.get()
+      before: sdk.Transfers.get_/transfers()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/liquidation_addresses/{liquidationAddressID}"]["put"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.update()
+      before: sdk.Liquidation Addresses.put_/customers/{customerID}/liquidation_addresses/{liquidationAddressID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.webhooks.get()
+      before: sdk.Webhooks.get_/webhooks()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.Cards.get()
+      before: sdk.Cards.get_/customers/{customerID}/card_accounts/{cardAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/liquidation_addresses/{liquidationAddressID}"]["get"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: getById
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.getById()
+      before: sdk.Liquidation Addresses.get_/customers/{customerID}/liquidation_addresses/{liquidationAddressID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/liquidation_addresses"]["get"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.list()
+      before: sdk.Liquidation Addresses.get_/liquidation_addresses()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts/{cardAccountID}/pin"]["post"]
+    update:
+      x-speakeasy-name-override: createPinUpdateUrl
+    x-speakeasy-metadata:
+      after: sdk.cards.createPinUpdateUrl()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts/{cardAccountID}/pin()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/liquidation_addresses/{liquidationAddressID}/balances"]["get"]
+    update:
+      x-speakeasy-group: liquidationAddresses
+      x-speakeasy-name-override: getBalance
+    x-speakeasy-metadata:
+      after: sdk.liquidationAddresses.getBalance()
+      before: sdk.Liquidation Addresses.get_/customers/{customerID}/liquidation_addresses/{liquidationAddressID}/balances()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/associated_persons"]["get"]
+    update:
+      x-speakeasy-name-override: getAssociatedPersons
+    x-speakeasy-metadata:
+      after: sdk.customers.getAssociatedPersons()
+      before: sdk.Customers.get_/customers/{customerID}/associated_persons()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/virtual_accounts"]["get"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.list()
+      before: sdk.Virtual Accounts.get_/virtual_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/crypto_return_policies/{policyID}"]["delete"]
+    update:
+      x-speakeasy-group: cryptoReturnPolicies
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.cryptoReturnPolicies.delete()
+      before: sdk.Crypto Return Policies.delete_/crypto_return_policies/{policyID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/static_memos"]["get"]
+    update:
+      x-speakeasy-group: staticMemos
+      x-speakeasy-name-override: listByCustomer
+    x-speakeasy-metadata:
+      after: sdk.staticMemos.listByCustomer()
+      before: sdk.Static Memos.get_/customers/{customerID}/static_memos()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/plaid_link_requests"]["post"]
+    update:
+      x-speakeasy-name-override: createLinkRequest
+    x-speakeasy-metadata:
+      after: sdk.plaid.createLinkRequest()
+      before: sdk.Plaid.post_/customers/{customerID}/plaid_link_requests()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/virtual_accounts/{virtualAccountID}"]["put"]
+    update:
+      x-speakeasy-group: virtualAccounts
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.virtualAccounts.update()
+      before: sdk.Virtual Accounts.put_/customers/{customerID}/virtual_accounts/{virtualAccountID}()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/card_accounts"]["post"]
+    update:
+      x-speakeasy-name-override: provisionAccount
+    x-speakeasy-metadata:
+      after: sdk.cards.provisionAccount()
+      before: sdk.Cards.post_/customers/{customerID}/card_accounts()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/customers/{customerID}/wallets"]["get"]
+    update:
+      x-speakeasy-group: bridgeWallets
+      x-speakeasy-name-override: listByCustomer
+    x-speakeasy-metadata:
+      after: sdk.bridgeWallets.listByCustomer()
+      before: sdk.Bridge Wallets.get_/customers/{customerID}/wallets()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/webhooks"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.webhooks.create()
+      before: sdk.Webhooks.post_/webhooks()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name
+  - target: $["paths"]["/developer/cards/designs"]["get"]
+    update:
+      x-speakeasy-name-override: getDesigns
+    x-speakeasy-metadata:
+      after: sdk.cards.getDesigns()
+      before: sdk.Cards.get_/developer/cards/designs()
+      created_at: 1769075582517
+      reviewed_at: 1769075738962
+      type: method-name

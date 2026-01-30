@@ -1,0 +1,11 @@
+# EventEpoch
+
+Specifies the starting point from which this webhook will receive events. This should usually be set to "webhook_creation", unless there is a reason why this webhook needs to process events from before its creation. When this value is set to "webhook_creation", the webhook will receive a small number of events preceding its creation for convenience.
+
+
+## Values
+
+| Name              | Value             |
+| ----------------- | ----------------- |
+| `WebhookCreation` | webhook_creation  |
+| `BeginningOfTime` | beginning_of_time |

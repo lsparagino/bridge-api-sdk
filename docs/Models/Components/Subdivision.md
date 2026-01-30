@@ -1,0 +1,9 @@
+# Subdivision
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `name`                                                                                            | *string*                                                                                          | :heavy_check_mark:                                                                                | The name of the subdivision                                                                       |
+| `code`                                                                                            | *string*                                                                                          | :heavy_check_mark:                                                                                | The subdivision code, which can be used in place of the name when interacting with Bridge via API |

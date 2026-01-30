@@ -1,0 +1,9 @@
+# DrainReturnDetails
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `reason`                                                                                                       | *?string*                                                                                                      | :heavy_minus_sign:                                                                                             | The reason for the return, as given by the returning financial institution.                                    |
+| `riskRejectionReason`                                                                                          | *?string*                                                                                                      | :heavy_minus_sign:                                                                                             | If the return is due to a risk rejection, this field will be populated with the reason for the risk rejection. |

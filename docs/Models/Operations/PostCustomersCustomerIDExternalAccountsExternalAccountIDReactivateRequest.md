@@ -1,0 +1,10 @@
+# PostCustomersCustomerIDExternalAccountsExternalAccountIDReactivateRequest
+
+
+## Fields
+
+| Field               | Type                | Required            | Description         |
+| ------------------- | ------------------- | ------------------- | ------------------- |
+| `idempotencyKey`    | *string*            | :heavy_check_mark:  | N/A                 |
+| `customerID`        | *string*            | :heavy_check_mark:  | N/A                 |
+| `externalAccountID` | *string*            | :heavy_check_mark:  | N/A                 |

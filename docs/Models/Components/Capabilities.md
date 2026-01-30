@@ -1,0 +1,11 @@
+# Capabilities
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `payinCrypto`                                                                             | [?Components\CustomerCapabilityState](../../Models/Components/CustomerCapabilityState.md) | :heavy_minus_sign:                                                                        | State of the customer capability                                                          |
+| `payoutCrypto`                                                                            | [?Components\CustomerCapabilityState](../../Models/Components/CustomerCapabilityState.md) | :heavy_minus_sign:                                                                        | State of the customer capability                                                          |
+| `payinFiat`                                                                               | [?Components\CustomerCapabilityState](../../Models/Components/CustomerCapabilityState.md) | :heavy_minus_sign:                                                                        | State of the customer capability                                                          |
+| `payoutFiat`                                                                              | [?Components\CustomerCapabilityState](../../Models/Components/CustomerCapabilityState.md) | :heavy_minus_sign:                                                                        | State of the customer capability                                                          |

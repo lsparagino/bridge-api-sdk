@@ -1,0 +1,10 @@
+# GetCustomersCustomerIDCardAccountsCardAccountIDTransactionsTransactionIDRequest
+
+
+## Fields
+
+| Field              | Type               | Required           | Description        |
+| ------------------ | ------------------ | ------------------ | ------------------ |
+| `customerID`       | *string*           | :heavy_check_mark: | N/A                |
+| `cardAccountID`    | *string*           | :heavy_check_mark: | N/A                |
+| `transactionID`    | *string*           | :heavy_check_mark: | N/A                |
